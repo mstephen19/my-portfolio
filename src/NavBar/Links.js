@@ -7,11 +7,12 @@ import {
   faInfo,
   faProjectDiagram,
 } from '@fortawesome/free-solid-svg-icons';
+import './nav.css';
 
 export default function Links() {
   return (
     <div class='flexed' style={{ height: '85%' }}>
-      <div class='flexed' style={{ height: '70%', background: 'green' }}>
+      <div class='flexed' style={{ height: '70%' }}>
         <a href='#introduction'>
           <FontAwesomeIcon icon={faHome} />
         </a>
@@ -25,7 +26,7 @@ export default function Links() {
           <FontAwesomeIcon icon={faEnvelope} />
         </a>
       </div>
-      <div class='flexed' style={{ height: '30%', background: 'yellow' }}>
+      <div class='flexed' style={{ height: '30%' }}>
         <a href='https://google.com'>
           <FontAwesomeIcon icon={faCoffee} />
         </a>

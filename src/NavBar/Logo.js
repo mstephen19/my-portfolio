@@ -1,4 +1,5 @@
 import React from 'react';
+import './nav.css'
 
 export default function Logo() {
   const animateLogo = () => {
@@ -7,8 +8,8 @@ export default function Logo() {
 
   return (
     <div
-      class='flexed'
-      style={{ height: '15%', background: 'red', justifyContent: 'center' }}
+      class='flexed logo'
+      style={{ height: '15%', justifyContent: 'center' }}
     >
       <h1 onMouseOver={animateLogo}>M.S</h1>
     </div>
