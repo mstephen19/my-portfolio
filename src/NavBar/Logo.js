@@ -1,17 +1,10 @@
 import React from 'react';
-import './nav.css'
+import './nav.css';
 
-export default function Logo() {
-  const animateLogo = () => {
-    console.log('hovered');
-  };
-
+export default function Logo({ ...rootDOMAttributes }) {
   return (
-    <div
-      class='flexed logo'
-      style={{ height: '15%', justifyContent: 'center' }}
-    >
-      <h1 onMouseOver={animateLogo}>M.S</h1>
-    </div>
+    <h1 className='logo' {...rootDOMAttributes}>
+      M.S
+    </h1>
   );
 }

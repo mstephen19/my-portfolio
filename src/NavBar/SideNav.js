@@ -9,9 +9,17 @@ export default function SideNav() {
 
   return (
     <>
-      <button onClick={showSidebar}>Test</button>
-      <nav className={sidebar ? 'active' : 'hidden'}>
-        <Logo />
+      <nav
+        className={sidebar ? 'active' : 'hidden'}
+        onMouseOver={showSidebar}
+        onMouseOut={showSidebar}
+      >
+        <div
+          className='flexed logoSpace'
+          style={{ height: '15%', justifyContent: 'center' }}
+        >
+          <Logo onClick={showSidebar} />
+        </div>
         <Links />
       </nav>
     </>

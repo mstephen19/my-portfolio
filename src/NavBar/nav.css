@@ -11,7 +11,7 @@ nav.active {
 }
 
 nav.hidden {
-  left: -50%;
+  left: -65px;
 }
 
 nav {
@@ -32,6 +32,10 @@ nav {
 }
 
 .logo {
+  font-size: 2.5rem;
+}
+
+.logoSpace {
   background: var(--main);
   color: var(--borders);
 }
