@@ -18,7 +18,7 @@ export default function SideNav() {
           className='flexed logoSpace'
           style={{ height: '15%', justifyContent: 'center' }}
         >
-          <Logo onClick={showSidebar} />
+          <Logo />
         </div>
         <Links />
       </nav>

@@ -1,9 +1,9 @@
 :root {
-  --main: rgb(32, 33, 37);
-  --secondary: rgb(48, 49, 53);
-  --borders: rgb(137, 141, 146);
-  --text: rgb(254, 254, 254);
-  --link: rgb(79, 121, 196);
+  --main: #dfd8ca;
+  --secondary: #fbf3e4;
+  --borders: #212121;
+  --text: #f6f6f6;
+  --link: #6f91b8;
 }
 
 * {
