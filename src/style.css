@@ -1,0 +1,45 @@
+:root {
+  --main: rgb(32, 33, 37);
+  --secondary: rgb(48, 49, 53);
+  --borders: rgb(137, 141, 146);
+  --text: rgb(254, 254, 254);
+  --link: rgb(79, 121, 196);
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-weight: 0;
+}
+
+.flexed {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  min-height: 500px;
+  max-width: 100px;
+  width: 5vw;
+  min-width: 75px;
+  position: fixed;
+  background: green;
+  box-shadow: 0 0 10px black;
+  background: var(--borders);
+  z-index: 999;
+}
+
+nav a {
+  color: var(--main);
+  font-size: 2rem;
+}
