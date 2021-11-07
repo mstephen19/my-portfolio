@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react';
 import MainContent from './MainContent/MainContent';
 import Splash from './MainContent/Sections/Splash';
 import AboutMe from './MainContent/Sections/AboutMe';
-import Carousel from './MainContent/Sections/Carousel';
+import Carousel from './MainContent/Sections/Carousel/TheCarousel';
 import ContactMe from './MainContent/Sections/ContactMe';
 import SideNav from './NavBar/SideNav';
 import LangToggle from './LangBtn/LangToggle';

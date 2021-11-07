@@ -198,3 +198,7 @@ body {
     transform: translate(100%, 0);
   }
 }
+
+.carImg {
+  width: clamp(200px, 50vw, 500px);
+}
