@@ -17,3 +17,23 @@
 *:focus {
   outline: none;
 }
+
+.langToggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: 2px solid black;
+  text-shadow: 0 0 1px black;
+  cursor: pointer;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  transition: all 0.1s linear;
+}
+
+.langToggle:hover {
+  box-shadow: 0 0 10px black;
+}
+
+.langToggle:active {
+  transform: scale(0.9);
+}

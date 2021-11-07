@@ -1,18 +1,23 @@
 import React from 'react';
 import Bounce from 'react-reveal/Bounce';
+import image from './profile.png';
 
-export default class AboutMe extends React.Component {
-  render() {
-    return (
-      <Bounce left>
-        <div></div>
-        <div></div>
-        <div></div>
-        <h1>This is the AboutMe section</h1>
-        <h2>Hi, my name is matt and blah blah blah</h2>
-        <h3>This was made in react yadda yadda</h3>
-        <h4>talk about skills</h4>
-      </Bounce>
-    );
-  }
+export default function AboutMe() {
+  return (
+    <>
+      <div className='title'>
+        <h1>About</h1>
+        <div className='line'></div>
+      </div>
+      <div className='contentWrapper'>
+        <Bounce left>
+          <img
+            src={image}
+            alt='Me'
+            style={{ borderRadius: '100%', width: 'clamp(200px, 30vw, 500px)' }}
+          />
+        </Bounce>
+      </div>
+    </>
+  );
 }
