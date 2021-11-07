@@ -26,8 +26,9 @@
   border: 2px solid black;
   text-shadow: 0 0 1px black;
   cursor: pointer;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   transition: all 0.1s linear;
+  z-index: 999;
 }
 
 .langToggle:hover {
@@ -36,4 +37,37 @@
 
 .langToggle:active {
   transform: scale(0.9);
+}
+
+.downScroll {
+  position: fixed;
+  cursor: pointer;
+  bottom: 5px;
+  right: 50%;
+  background: none;
+  border: none;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  color: var(--borders);
+  animation: changing 5s ease-in-out 0s infinite;
+  z-index: 999;
+}
+
+@keyframes changing {
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  50% {
+    color: black;
+  }
+  70% {
+    color: grey;
+  }
+  85%,
+  90%,
+  95%,
+  100% {
+    color: black;
+  }
 }

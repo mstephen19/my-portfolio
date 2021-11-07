@@ -6,7 +6,7 @@ export default function LangToggle({ ...rootDOMAttributes }) {
   return (
     <div>
       <button className='langToggle' {...rootDOMAttributes}>
-        {lang === 'ru' ? 'EN' : 'RU'}
+        {lang === 'ru' ? 'En' : 'Ру'}
       </button>
     </div>
   );
