@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Bounce from 'react-reveal/Bounce';
-import image from './profile.png';
+import image from './assets/profile.png';
 import { LangContext } from '../../App';
 import SkillsIcons from './SkillsIcons';
 

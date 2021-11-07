@@ -4,7 +4,7 @@
   cursor: grab;
 }
 
-.keen-slider__slide img {
+.keen-slider__slide a>img {
   object-fit: contain;
   width: 100%;
   height: 100%;

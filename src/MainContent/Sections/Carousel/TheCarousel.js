@@ -5,8 +5,11 @@ import 'keen-slider/keen-slider.min.css';
 import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
 import './carousel.css';
+import SliderSlide from './SliderSlide';
+import Bounce from 'react-reveal/Bounce';
 
-import image from '../profile.png';
+import haunted from '../assets/haunted-demo.gif';
+import notes from '../assets/notes-demo.gif';
 
 export default function TheCarousel() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -22,6 +25,17 @@ export default function TheCarousel() {
     title: lang === 'en' ? 'Projects' : 'Мои Проекты',
   };
 
+  const slides = [
+    {
+      image: haunted,
+      link: 'https://warm-springs-18820.herokuapp.com/',
+    },
+    {
+      image: notes,
+      link: 'https://salty-plateau-23106.herokuapp.com/notes',
+    },
+  ];
+
   return (
     <>
       <div className='title'>
@@ -30,14 +44,9 @@ export default function TheCarousel() {
       </div>
       <div className='contentWrapper' style={{ flexDirection: 'row' }}>
         <div ref={sliderRef} className='keen-slider'>
-          <div className='keen-slider__slide'>
-            <img src={image} alt='' />
-          </div>
-          <div className='keen-slider__slide'>2</div>
-          <div className='keen-slider__slide'>3</div>
-          <div className='keen-slider__slide'>4</div>
-          <div className='keen-slider__slide'>5</div>
-          <div className='keen-slider__slide'>6</div>
+          {slides.map((obj) => (
+            <SliderSlide image={obj.image} link={obj.link} />
+          ))}
         </div>
         {slider && (
           <>
