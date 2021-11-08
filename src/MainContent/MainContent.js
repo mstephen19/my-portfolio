@@ -1,5 +1,4 @@
-import React from 'react';
-import { useContext, useState } from 'react/cjs/react.development';
+import React, { useContext, useState } from 'react';
 import { LangContext } from '../App';
 import './main.css';
 import ScrollDown from './ScrollDown';

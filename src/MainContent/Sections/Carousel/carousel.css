@@ -24,6 +24,7 @@
   transform: translateY(-525%);
   position: relative;
   transition: all 0.2s linear;
+  display: block;
 }
 
 .arrow:hover {
@@ -58,4 +59,12 @@
 .ghBtn:active {
   transform: translate(-2px, 3px);
   box-shadow: -2px 2px 0px black;
+}
+
+@media only screen and (hover: none) and (pointer: coarse) {
+  .arrow,
+  .arrow--right,
+  .arrow--left {
+    display: none;
+  }
 }

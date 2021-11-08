@@ -1,6 +1,3 @@
-@import 'react-alice-carousel/lib/alice-carousel.css';
-/* @import 'react-alice-carousel/lib/scss/alice-carousel.scss'; */
-
 :root {
   --main: #dfd8ca;
   --secondary: #fbf3e4;
@@ -12,6 +9,7 @@
 * {
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
   padding: 0;
   font-weight: 0;
@@ -72,5 +70,15 @@
   95%,
   100% {
     color: black;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
   }
 }

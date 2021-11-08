@@ -179,7 +179,7 @@ body {
     height: 40%;
   }
   .w-30 img {
-    height: 85%;
+    height: clamp(125px, 80%, 85%);
     width: auto;
   }
 }

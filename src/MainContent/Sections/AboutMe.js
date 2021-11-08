@@ -30,13 +30,13 @@ export default function AboutMe() {
             <img src={image} alt='Me' />
           </Bounce>
         </div>
-        <div className='w-70'>
+        <div className='w-70' style={{ zIndex: '666' }}>
           {/* About me Body */}
           <h1
             style={{
               fontWeight: '400',
               fontStyle: 'italic',
-              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontSize: 'clamp(1.5rem, 6vw, 3rem)',
             }}
           >
             {content.head}
@@ -44,7 +44,7 @@ export default function AboutMe() {
           <p
             style={{
               maxWidth: '75%',
-              fontSize: 'clamp(1rem, 1.5vw, 2.5rem)',
+              fontSize: 'clamp(0.75rem, 2vw, 2.5rem)',
             }}
           >
             {content.body}
