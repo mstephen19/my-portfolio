@@ -47,7 +47,7 @@
   cursor: crosshair;
   border-radius: 5px;
   box-shadow: -5px 5px 0px black;
-  margin: 5px;
+  margin-bottom: 5px;
   transition: all 0.2s linear;
   z-index: 999;
 }
@@ -59,12 +59,4 @@
 .ghBtn:active {
   transform: translate(-2px, 3px);
   box-shadow: -2px 2px 0px black;
-}
-
-@media only screen and (hover: none) and (pointer: coarse) {
-  .arrow,
-  .arrow--right,
-  .arrow--left {
-    display: none;
-  }
 }

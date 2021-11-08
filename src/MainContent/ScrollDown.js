@@ -7,7 +7,7 @@ export default function ScrollDown({ ...rootDOMAttributes }) {
   const hide = useContext(HideContext);
 
   const handleClick = (e) => {
-    document.querySelector('.container').scrollBy(0, 400);
+    document.querySelector('.container').scrollBy(0, 600);
   };
 
   const secondClick = (e) => {

@@ -81,4 +81,7 @@
   body {
     position: relative;
   }
+  .downScroll {
+    pointer-events: none;
+  }
 }
