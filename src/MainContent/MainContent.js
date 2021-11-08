@@ -1,14 +1,10 @@
 import React from 'react';
-import {
-  useContext,
-  createContext,
-  useState,
-} from 'react/cjs/react.development';
+import { useContext, useState } from 'react/cjs/react.development';
 import { LangContext } from '../App';
 import './main.css';
 import ScrollDown from './ScrollDown';
 
-export const HideContext = createContext();
+export const HideContext = React.createContext();
 
 export default function MainContent(props) {
   const [toHideBtn, setHide] = useState(false);
