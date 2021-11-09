@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# [Matt Stephens Portfolio](https://mstephen19.github.io/my-portfolio)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A brand new and very much improved version of my previous portfolio design, with a new side navbar, clean animations, a better color scheme, and a carousel showing my most recent back-end, front-end, and full-stack projects. The inspiration for this design can be found [here](https://mstephen19.github.io/newestPortfolio), on my old portfolio site.
 
-## Available Scripts
+This site is responsive, and has been tested on various screen sizes and mobile devices.
 
-In the project directory, you can run:
+![Image](./public/site-demo.gif)
 
-### `yarn start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [React](https://reactjs.org/)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [React Reveal](https://www.react-reveal.com/)
+- [KeenSlider](https://keen-slider.io/)
+- [EmailJS](https://www.emailjs.com/)
+- [FontAwesome](https://fontawesome.com)
+- [DevIcon React SVG](https://www.npmjs.com/package/devicon-react-svg)
+- [Google Fonts](https://fonts.google.com/)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Notable Features
 
-### `yarn test`
+### Language Toggle
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```JavaScript
+// App.js
+export const LangContext = createContext();
 
-### `yarn build`
+// Inside App component
+const [lang, setLang] = useState('en');
+const toggleLang = () => {
+  setLang((prevLang) => (prevLang === 'en' ? 'ru' : 'en'));
+  lang === 'en'
+    ? document.querySelector('html').setAttribute('lang', 'en')
+    : document.querySelector('html').setAttribute('lang', 'ru');
+};
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+return (
+  <LangToggle onClick={toggleLang} />
+)
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Responsive widths and font sizes using clamp()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```CSS
+/* Example in contact.css */
+.contactContainer input,
+textarea {
+  width: clamp(200px, 75%, 800px);
+  font-size: clamp(1.25rem, 5vw, 3rem);
+  background: var(--main);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+```
 
-### `yarn eject`
+## Live deployed link
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Check out the site here](https://mstephen19.github.io/my-portfolio)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Created by
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Matt Stephens**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [Link to Portfolio Site](https://mstephen19.github.io/newestPortfolio)
+- [Link to Github](https://github.com/mstephen19)
+- [Link to LinkedIn](https://www.linkedin.com/mstephen19)
 
-## Learn More
+### Acknowledgments
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Shoutout to [Jesse Lewis](https://www.linkedin.com/in/jesseaustinlewis/) for teaching me about component lifecycles and context within React
