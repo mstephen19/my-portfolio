@@ -19,6 +19,7 @@ export default function ContactForm() {
     subject: lang === 'en' ? 'Subject' : 'Тема',
     message: lang === 'en' ? 'Message' : 'Сообщение',
     submitMsg: lang === 'en' ? 'Send Message' : 'Отправить',
+    thanksMsg: lang === 'en' ? 'Message sent!' : 'Сообщение отправлено!',
   };
 
   const submit = () => {
@@ -55,29 +56,33 @@ export default function ContactForm() {
         placeholder={placeholders.name}
         value={name}
         onChange={(e) => setName(e.target.value)}
+        maxLength='50'
       />
       <input
         type='email'
         placeholder={placeholders.email}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        maxLength='100'
       />
       <input
         type='text'
         placeholder={placeholders.subject}
         value={subject}
         onChange={(e) => setSubject(e.target.value)}
+        maxLength='40'
       />
       <textarea
         placeholder={placeholders.message}
         value={message}
         onChange={(e) => setMessage(e.target.value)}
+        maxLength='500'
       ></textarea>
       <button className='emailSubmit' onClick={submit}>
         {placeholders.submitMsg}
       </button>
       <span className={emailSent ? 'visiblee' : 'hiddenn'}>
-        Thank you for your message, we will be in touch in no time!
+        {placeholders.thanksMsg}
       </span>
     </>
   );
