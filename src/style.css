@@ -19,24 +19,61 @@
   outline: none;
 }
 
-.langToggle {
+/* .langToggle,
+.cvBtn {
   position: fixed;
-  top: 10px;
-  right: 10px;
   background: none;
   border: 2px solid black;
   text-shadow: 0 0 1px black;
-  cursor: pointer;
-  font-size: clamp(1.25rem, 4vw, 2rem);
   transition: all 0.1s linear;
   z-index: 999;
+  cursor: pointer;
+  font-size: clamp(1.25rem, 4vw, 2rem);
 }
 
-.langToggle:hover {
+.langToggle {
+  top: 10px;
+  right: 10px;
+}
+
+.cvBtn {
+  top: 50px;
+  right: 10px;
+} */
+
+.langToggle,
+.cvBtn {
+  background: none;
+  border: 2px solid black;
+  text-shadow: 0 0 1px black;
+  transition: all 0.1s linear;
+  z-index: 99999;
+  cursor: pointer;
+  font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+.langToggle {
+  margin-bottom: 5px;
+}
+
+.forBtns {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 99999;
+}
+
+.langToggle:hover,
+.cvBtn:hover {
   box-shadow: 0 0 10px black;
 }
 
-.langToggle:active {
+.langToggle:active,
+.cvBtn:active {
   transform: scale(0.9);
 }
 

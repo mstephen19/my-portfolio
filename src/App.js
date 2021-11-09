@@ -6,6 +6,7 @@ import Carousel from './MainContent/Sections/Carousel/TheCarousel';
 import ContactMe from './MainContent/Sections/ContactMe';
 import SideNav from './NavBar/SideNav';
 import LangToggle from './LangBtn/LangToggle';
+import CVBtn from './MainContent/CVBtn';
 import './style.css';
 
 export const LangContext = createContext();
@@ -22,7 +23,10 @@ function App() {
 
   return (
     <LangContext.Provider value={lang}>
-      <LangToggle onClick={toggleLang} />
+      <div className='forBtns'>
+        <LangToggle onClick={toggleLang} />
+        <CVBtn />
+      </div>
       <SideNav />
       <MainContent
         splash={<Splash />}
