@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Bounce from 'react-reveal/Bounce';
 import { LangContext } from '../../App';
+import ContactForm from './ContactForm';
 
 export default function ContactMe() {
   const lang = useContext(LangContext);
@@ -16,7 +17,9 @@ export default function ContactMe() {
       </div>
       <div className='contentWrapper'>
         <Bounce left>
-          <h1>Contact Page</h1>
+          <div className='contactContainer'>
+            <ContactForm />
+          </div>
         </Bounce>
       </div>
     </>
